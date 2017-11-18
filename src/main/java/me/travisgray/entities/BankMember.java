@@ -38,9 +38,8 @@ public class BankMember {
 //    EAGER fetching has been specified with fetch=FetchType.EAGER
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(joinColumns = @JoinColumn(name ="user_id"),inverseJoinColumns = @JoinColumn(name="role_id"))
     private Collection<BankmemberRole>bankmemberRoles;
-
-
 
     public Long getId() {
         return id;
