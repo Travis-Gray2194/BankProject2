@@ -1,0 +1,165 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns= "http://w3.org/1999/xhtml" xmlns:th= "www.thymeleaf.org">
+<head>
+    <title>E-Banking a Banking Category Bootstrap Bootstrap Responsive website Template | Contact :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="E-Banking Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/font-awesome.css" rel="stylesheet">   <!-- font-awesome icons -->
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- web-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- //web-fonts -->
+
+</head>
+<body>
+<div th:replace="main::topbanner"></div>
+<!-- contact -->
+<div class="w3ls-section contact">
+    <div class="container">
+        <div class="w3ls-title">
+            <h2 class="h3-w3l">Registration Form</h2>
+            <p>Our Nearest Branch If You Have any Questions?</p>
+        </div>
+        <div class="w3ls_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48306.05339877067!2d-74.245183970742!3d40.825144655510556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2555646a723a1%3A0x449f3366d017b214!2sMontclair%2C+NJ%2C+USA!5e0!3m2!1sen!2sin!4v1465991700675" style="border:0"></iframe>
+        </div>
+        <div class="contact_wthreerow agileits-w3layouts">
+            <div class="col-md-5 agileits_w3layouts_contact_gridl">
+                <div class="agileits_mail_grid_right_grid">
+                    <h4>Moblie Banking?</h4>
+                    <p>Mobile Banking lets you stay on top of your account activity safely and securely, no matter where you are. View your account balance while standing in line at the grocery store, transfer money between your accounts on the fly, receive alerts to your phone when a payment is due, and more. To get started, all you need is Account Access and our iPhone® or AndroidTM app.</p>
+                </div>
+                <div class="agileits_mail_grid_right_grid">
+                    <h4>Contact Info</h4>
+                    <ul class="contact_info">
+                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block,3FB,New Jersey.</li>
+                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7 w3l_contact_form">
+                <h4>Registration Form</h4>
+                <form autocomplete="off" action="#" th:action= "@{/register}" th:object= "${user}" method="post">
+                    <p class="col-md-2"></p> <label class="col-md-4">First Name</label><strong>
+                    <span class="alert alert-danger" th:if= "${#fields.hasErrors('firstName')}" th:errors= "*{firstName}">First Name Error</span>
+                </strong>
+                    <input type="text" id="firstName" placeholder="First Name" th:field="*{firstName}"/><br/><br/>
+                    <p class="col-md-2"></p> <label class="col-md-4">Last Name</label><strong>
+                    <span class="alert alert-danger" th:if= "${#fields.hasErrors('lastName')}" th:errors= "*{lastName}">Last Name Error</span>
+                </strong>
+                    <input type="text" id="lastName" placeholder="Last Name" th:field= "*{lastName}"/><br/><br/>
+
+                    <p class="col-md-2"></p> <label class="col-md-4">Email</label><strong>
+                    <span class="alert alert-danger" th:if= "${#fields.hasErrors('email')}" th:errors= "*{email}">Email Error</span>
+                </strong>
+                    <input type="text" id="email" placeholder="Email" th:field= "*{email}"/><br/><br/>
+
+                    <p class= "col-md-2"></p> <label class= "col-md-4">Username</label><strong>
+                    <span class= "alert alert-danger" th:if= "${#fields.hasErrors('username')}" th:errors= "*{username}">Username Error</span>
+                </strong>
+                    <input type= "text" id= "username" placeholder="Username" th:field= "*{username}"/><br/><br/>
+                    <p class= "col-md-2"></p><label class="col-md-4">Password</label><strong>
+                    <span class= "alert alert-danger" th:if= "${#fields.hasErrors('password')}" th:errors= "*{password}">Password Error</span>
+                </strong>
+                    <input type= "password" id= "password" placeholder= "Password" th:field= "*{password}"/><br/><br/>
+                    <p class= "col-md-6"></p><button type= "submit" class= "btn btn-default"> Submit</button>
+
+                </form>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //contact -->
+
+<!--footer-->
+<div class="agile-footer w3ls-section">
+    <div class="container">
+        <div class="col-md-7 list-footer">
+            <ul class="footer-nav">
+                <li><a  href="index.html">Home</a></li>
+                <li><a  href="about.html">About</a></li>
+                <li><a  href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="register.html">New Member Registration</a></li>
+            </ul>
+            <p>Vivamus sed porttitor felis. Pellentesque habitant morbi tristique senectus et netus et ctetur adipiscing elit. Cras rutrum iaculis</p>
+        </div>
+        <div class="col-md-5 agileinfo-sub">
+            <h6>Click the link below to start the subscription service</h6>
+            <a href="#" data-toggle="modal" data-target="#myModal1">subscribe</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="w3_agile-copyright text-center">
+    <p>© 2017 E-Banking. All rights reserved | Design by <a href="//w3layouts.com/">W3layouts</a></p>
+</div>
+<!--//footer-->
+<!-- subscribe -->
+<div class="modal bnr-modal fade" id="myModal1" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="images/logo.png" alt="logo"/>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body modal-spa">
+                <p>E-Banking's email newsletter provides subscribers with helpful articles on important issues in the banking industry, as well as news about events and more! To sign up for the newsletter, fill the below form.</p>
+                <form class=" wthree-subsribe" action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required="">
+                    <input type="email" name="email" placeholder="your Email" required="">
+                    <input type="submit" value="SignUp">
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //subscribe -->
+<script src="js/SmoothScroll.min.js"></script>
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+         var defaults = {
+         containerID: 'toTop', // fading element id
+         containerHoverID: 'toTopHover', // fading element hover id
+         scrollSpeed: 1200,
+         easingType: 'linear'
+         };
+         */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
